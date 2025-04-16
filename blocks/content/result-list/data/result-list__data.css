@@ -1,0 +1,8 @@
+.result-list__data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    color: #418EA3;   
+    font-size: 16px;
+}

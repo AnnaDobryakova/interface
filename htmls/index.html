@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/index.css">
+    <title>Экран выбора данных</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+    <div class="page">
+        <main class="content">
+            <form class="choice-form__form" id="mainForm">
+                <div class="choice-form__field">
+                    <label for="first_title" class="choice-form__label">Коммерческое предложение</label>
+                    <hr class="choice-form__hr">
+                    <input class="choice-form__input" type="text" id="first_title" name="first_title" required placeholder="Нажмите, чтобы выбрать" readonly>
+                    <a href="selected_data.html?target=first_title" style="text-decoration: none;">
+                        <button type="button" class="choice-form__input-button"></button>
+                    </a>
+                </div>
+        
+                <div class="choice-form__field">
+                    <label for="second_title" class="choice-form__label">Техническое предложение</label>
+                    <hr class="choice-form__hr">
+                    <input class="choice-form__input" type="text" id="second_title" name="second_title" required placeholder="Нажмите, чтобы выбрать" readonly>
+                    <a href="selected_data.html?target=second_title" style="text-decoration: none;">
+                        <button type="button" class="choice-form__input-button"></button>
+                    </a>
+                </div>
+        
+                <div class="choice-form__field">
+                    <label for="third_title" class="choice-form__label">Шаблоны генерации</label>
+                    <hr class="choice-form__hr">
+                    <select class="choice-form__input-choice" id="pattern" name="pattern" required>
+                        <option class="choice-form__input" value="" disabled selected>Нажмите, чтобы выбрать</option>
+                        <option class="choice-form__input" value="/files/Шаблон.docx" style="color: black;">Шаблон №1</option>
+                    </select>
+                    <button type="button" class="choice-form__input-button" style="background-image: none; background-color: white; border: 0;"></button>
+                </div>
+                <button type="submit" id="downloadBtn" class="choice-form__input-button-main">Сгенерировать ТКП</button>
+            </form>
+        </main>
+    </div>
+    <script src="../scripts/index.js"></script>
+</body>
+</html>

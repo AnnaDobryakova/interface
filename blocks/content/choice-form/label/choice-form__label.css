@@ -1,0 +1,10 @@
+.choice-form__label{
+    text-align: center;
+    width: 20%;
+    font-size: 30px;
+    color: #5B9EB0;
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+
+}

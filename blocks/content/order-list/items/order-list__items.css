@@ -1,0 +1,8 @@
+.order-list__items{
+    display: flex;
+    padding: 10px;
+    border-bottom: 3px solid #8BBCC9;
+    border-radius: 1px;
+    text-align: center;
+
+}

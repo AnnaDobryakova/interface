@@ -1,0 +1,27 @@
+.order-list__button-main{
+    width: 240px; 
+    height: 50px;
+    font-size: 16px;
+    color: #35889D;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+    border: 2px solid #AED6E1;
+    box-shadow: 0 0 15px rgba(62, 140, 161, 1);
+    transition: 0.3s;
+}
+
+
+.order-list__button-main:hover{
+    color: white;
+    background-color: #91CCDB;
+    border: 2px solid #91CCDB;
+    box-shadow: 0 0 30px rgba(62, 140, 161, 1);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}

@@ -1,0 +1,13 @@
+@import url('../blocks/page/page.css');
+
+@import url('../blocks/content/content.css');
+@import url('../blocks/content/choice-form/choice-form.css');
+@import url('../blocks/content/choice-form/form/choice-form__form.css');
+@import url('../blocks/content/choice-form/field/choice-form__field.css');
+@import url('../blocks/content/choice-form/label/choice-form__label.css');
+@import url('../blocks/content/choice-form/hr/choice-form__hr.css');
+@import url('../blocks/content/choice-form/input-with-button/choice-form__input-with-button.css');
+@import url('../blocks/content/choice-form/input-with-button/input-button/choice-form__input-button.css');
+@import url('../blocks/content/choice-form/input-with-button/input/choice-form__input.css');
+
+@import url('..');

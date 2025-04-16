@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/selected_data.css">
+    <title>Экран выбранных данных</title>
+</head>
+<body>
+    <div class="page">
+        <main class="content">
+            <div class="order-list">
+                <div class="order-list__titles">
+                    <div class="order-list__title">Название</div>
+                    <hr class="order-list__hr">
+                    <div class="order-list__title">Дата поступления заявки</div>
+                    <hr class="order-list__hr">
+                    <div class="order-list__title">Дата обновления документа</div>
+                    <hr class="order-list__hr">
+                    <div class="order-list__title">Версия</div>
+                </div>
+                <hr class="order-list__hr-main">
+
+                <div class="order-list__items">
+                    <div class="order-list__checkbox"><input type="radio" name="order" value="order1"></div>
+                    <div class="order-list__name">Заказ 1</div>
+                    <div class="order-list__item">12 марта 2025 г.</div>
+                    <div class="order-list__item">17 марта 2025 г.</div>
+                    <div class="order-list__item">VI.8</div>
+                </div>
+
+                <div class="order-list__items">
+                    <div class="order-list__checkbox"><input type="radio" name="order" value="order2"></div>
+                    <div class="order-list__name">Заказ 2</div>
+                    <div class="order-list__item">12 марта 2025 г.</div>
+                    <div class="order-list__item">17 марта 2025 г.</div>
+                    <div class="order-list__item">VI.2</div>
+                </div>
+
+                <div class="order-list__items">
+                    <div class="order-list__checkbox"><input type="radio" name="order" value="order3"></div>
+                    <div class="order-list__name">Заказ 3</div>
+                    <div class="order-list__item">12 февраля 2025 г.</div>
+                    <div class="order-list__item">17 февраля 2025 г.</div>
+                    <div class="order-list__item">VI</div>
+                </div>
+                
+                <div class="order-list__items">
+                    <div class="order-list__checkbox"><input type="radio" name="order" value="order4"></div>
+                    <div class="order-list__name">Заказ 4</div>
+                    <div class="order-list__item">10 февраля 2025 г.</div>
+                    <div class="order-list__item">16 февраля 2025 г.</div>
+                    <div class="order-list__item">VI.4</div>
+                </div>
+            </div>
+            <button type="button" class="order-list__button-main" id="confirm-btn">Использовать для генерации</button>
+        </main>
+    </div>
+    <script src="../scripts/selected_data.js"></script>
+    
+</body>
+</html>

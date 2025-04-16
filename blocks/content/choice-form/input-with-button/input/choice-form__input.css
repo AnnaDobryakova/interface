@@ -1,0 +1,17 @@
+.choice-form__input{
+    width: 210px;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px;
+    border: 2px solid #CBCBCB;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.choice-form__input-choice{
+    height: 40px;
+    font-size: 16px;
+    padding: 5px;
+    border: 2px solid #CBCBCB;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}

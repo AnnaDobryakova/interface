@@ -1,0 +1,6 @@
+.result-list__buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}

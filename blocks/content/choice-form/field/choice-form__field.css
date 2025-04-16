@@ -1,0 +1,8 @@
+.choice-form__field{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

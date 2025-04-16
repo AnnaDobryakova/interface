@@ -1,0 +1,15 @@
+@import url('../blocks/page/page.css');
+
+@import url('../blocks/content/content.css');
+@import url('../blocks/content/result-list/result-list.css');
+@import url('../blocks/content/result-list/hr/result-list__hr.css');
+@import url('../blocks/content/result-list/title/result-list__title.css');
+@import url('../blocks/content/result-list/data/result-list__data.css');
+@import url('../blocks/content/result-list/data/title/result-list__data-title.css');
+@import url('../blocks/content/result-list/data/date/result-list__data-date.css');
+@import url('../blocks/content/result-list/data/document/result-list__data-document.css');
+@import url('../blocks/content/result-list/block/result-list__block.css');
+@import url('../blocks/content/result-list/buttons/result-list__buttons.css');
+@import url('../blocks/content/result-list/buttons/button/result-list__button.css');
+
+@import url('..');

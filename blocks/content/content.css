@@ -1,0 +1,9 @@
+.content{
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 30px;
+    border: 1.5px solid black;
+    border-radius: 4px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
