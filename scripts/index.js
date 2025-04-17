@@ -48,6 +48,20 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        const orderData = {
+            orderNumber: selections.first_title.replace('order', ''),
+            documentName: `Предварительное технико-коммерческое предложение_Заказ ${selections.first_title.replace('order', '')}.docx`,
+            date: new Date().toLocaleDateString('ru-RU', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            })
+        };
+        localStorage.setItem('orderData', JSON.stringify(orderData));
+    
+        // Переход на страницу с результатами
+        window.location.href = 'processed_data.html';
+
         // Получаем выбранные файлы
         const kpFile = fileMapping.kp[selections.first_title];
         const tpFile = fileMapping.tp[selections.second_title];
