@@ -48,48 +48,23 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        const orderData = {
-            orderNumber: selections.first_title.replace('order', ''),
-            documentName: `Предварительное технико-коммерческое предложение_Заказ ${selections.first_title.replace('order', '')}.docx`,
-            date: new Date().toLocaleDateString('ru-RU', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric'
-            })
-        };
-        localStorage.setItem('orderData', JSON.stringify(orderData));
+        // Получаем сохраненные данные заказа
+        const orderData = JSON.parse(localStorage.getItem('currentOrderData')) || {};
     
-        // Переход на страницу с результатами
-        window.location.href = 'processed_data.html';
+        // Создаем объект с данными заказа
+        const fullOrderData = {
+            ...orderData,
+            orderNumber: selections.first_title.replace('order', ''),
+            documentName: `Предварительное технико-коммерческое предложение_Заказ ${selections.first_title.replace('order', '')}.docx`
+        };
+        localStorage.setItem('currentOrderData', JSON.stringify(fullOrderData));
+        
+        // Очищаем форму
+        document.getElementById('mainForm').reset();
+        localStorage.removeItem('documentSelections');
 
-        // Получаем выбранные файлы
-        const kpFile = fileMapping.kp[selections.first_title];
-        const tpFile = fileMapping.tp[selections.second_title];
-        const patternFile = document.getElementById('pattern').value;
-
-            // Скачивание файлов по одному
-        const filesToDownload = [
-            { name: kpFile, path: `../files/${kpFile}` },
-            { name: tpFile, path: `../files/${tpFile}` },
-            patternFile && { name: 'Шаблон.docx', path: patternFile }
-        ].filter(Boolean);
-
-        filesToDownload.forEach((file, index) => {
-            setTimeout(() => {
-                const link = document.createElement('a');
-                link.href = file.path;
-                link.download = file.name;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }, index * 500);
-        });
-
-        // Очистка формы после скачивания
-        setTimeout(() => {
-            document.getElementById('mainForm').reset();
-            localStorage.removeItem('documentSelections');
-            alert('Все документы успешно скачаны!');
-        }, filesToDownload.length * 500 + 500);
+        
+        // Переходим на страницу результатов
+        window.location.href = '../htmls/processed_data.html';
     });
 });

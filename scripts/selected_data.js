@@ -29,14 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
     confirmBtn.addEventListener('click', function() {
         
         const selectedRadio = document.querySelector('input[name="order"]:checked');
-        
+    
         if (!selectedRadio) {
-            alert('Пожалуйста, выберите документ!');
+            alert('Пожалуйста, выберите заказ!');
             return;
         }
 
         const orderId = selectedRadio.value;
-
         const orderData = {
             orderNumber: orderId.replace('order', ''),
             orderName: document.getElementById(`name-${orderId}`).textContent,
