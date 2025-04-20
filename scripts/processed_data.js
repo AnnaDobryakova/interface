@@ -57,7 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(() => {
                     const link = document.createElement('a');
                     link.href = file.path;
-                    link.download = file.name;
+
+                    const newName = file.name.split('_')[0] || file.name;
+                    link.download = newName;
                     
                     // Обработчик ошибок
                     link.onerror = () => {
@@ -80,4 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
             alert(`Произошла ошибка: ${error.message}`);
         }
     });
+
+    document.getElementById('backBtn').addEventListener('click', function() {
+        window.location.href = '../htmls/index.html';
+    })
 });
