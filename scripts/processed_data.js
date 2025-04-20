@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
-                }, index * 500);
+                }, index * 3000);
             });
 
             alert(`Файлы для заказа ${orderNumber} успешно сохранены!`);
